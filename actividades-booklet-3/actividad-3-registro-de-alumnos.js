@@ -7,6 +7,6 @@ registrados.
 let resultado = ""
 for (i=0; i<10; i++) {
     let alumno= prompt("Indicar el nombre de alumno");
-    resultado= resultado + ", " + alumno
+    resultado= resultado + " " + alumno
 }
 alert (resultado)
