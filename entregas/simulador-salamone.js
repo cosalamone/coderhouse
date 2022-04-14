@@ -1,8 +1,8 @@
-// Ejecucion de la funcion OK
+// Ejecucion de la funcion
 
 window.onload = carritoCompra;
 
-// Funcion principal
+// FUNCION PRINCIPAL
 
 function carritoCompra() {
     let compra = lista();
@@ -10,30 +10,30 @@ function carritoCompra() {
 }
 
 
-// funcion accesoria 1 OK
+// funcion accesoria 1 - obtener la lista de compra 
 function lista() {
-    let compra = []
-    let promptIngresado = ""
+    let compra = [];
+    let promptIngresado = "";
 
     do {
-        promptIngresado = prompt("¿Qué plantas querés comprar? Al finalizar su carrito escriba 'fin'").toLowerCase()
+        promptIngresado = prompt("¿Qué plantas querés comprar? Al finalizar su carrito escriba 'fin'").toLowerCase();
 
         if (promptIngresado != "fin")
-            compra.push(promptIngresado)
+            compra.push(promptIngresado);
 
     }
     while (promptIngresado != "fin")
 
-    return (compra)
+    return (compra);
 }
 
 
-// funcion accesoria 2 
+// funcion accesoria 2 - calcular costo de lista de compra 
 
 function calcularCosto(compra) {
 
-    let costo = 0
-    let sinStock = []
+    let costo = 0;
+    let sinStock = [];
     for (let i = 0; i < compra.length; i++) {
 
         let precio = precioProducto(compra[i]);
@@ -41,26 +41,32 @@ function calcularCosto(compra) {
 
         if (precio != null) {
 
-            costo = costo + precio
+            costo = costo + precio;
 
         } else {
-            sinStock.push(compra[i])
+            sinStock.push(compra[i]);
         }
 
     }
     if (sinStock.length > 0) {
-        alert("El/los producto/s " + sinStock + " no se agregaron al carrito de compras porque no contamos con stock")
+        alert("El/los producto/s " + sinStock + " no se agregaron al carrito de compras porque no contamos con stock");
 
     }
-    alert("El valor total de tu compra incluyendo el envío de $349 es de " + (costo + 349))
+
+    alert("El valor total de tu compra incluyendo el envío de $349 es de " + (costo + 349));
 
 }
 
-// funcion 3 - Precio del Producto
+// funcion 3 - calcular Precio del Producto
 
 function precioProducto(nombreProducto) {
 
-    let productos = [{ nombre: "haworthia", precio: 200 }, { nombre: "graptoveria", precio: 150 }, { nombre: "echeveria", precio: 250 }, { nombre: "gasteria", precio: 250 }, {}]
+    let productos = [
+        { nombre: "haworthia", precio: 200 },
+        { nombre: "graptoveria", precio: 150 },
+        { nombre: "echeveria", precio: 250 },
+        { nombre: "gasteria", precio: 250 },
+    ]
 
     for (let i = 0; i < productos.length; i++) {
         if (nombreProducto == productos[i].nombre) {
