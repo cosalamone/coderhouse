@@ -1,61 +1,38 @@
-/*
-
-// { especie: "", tipo: "", precio: , foto:"},
-
-// PRODUCTOS PLANTAS SUCULENTAS
-let productosSuculentas = [
-    { especie: "haworthia", tipo: "fasciata", precio: 200, foto: "(./fotos/rsz_suculentas-2.jpg" },
-    { especie: "graptopetalum", tipo: "paraguayense", precio: 150, foto: "./fotos/rsz_suculentas-1.jpg" },
-    { especie: "echeveria", tipo: "lola", precio: 250 },
-    { especie: "gasteria", tipo: "", precio: 250 },
-    { especie: "sedum", tipo: "burrito", precio: 250 },
+// PRODUCTOS 
+let listaProductos = [
+    { categoria: "suculentas", especie: "haworthia", tipo: "fasciata", precio: 200, foto: "(./fotos/rsz_suculentas-2.jpg" },
+    { categoria: "suculentas", especie: "graptopetalum", tipo: "paraguayense", precio: 150, foto: "./fotos/rsz_suculentas-1.jpg" },
+    { categoria: "suculentas", especie: "echeveria", tipo: "lola", precio: 250 },
+    { categoria: "suculentas", especie: "gasteria", tipo: "", precio: 250 },
+    { categoria: "suculentas", especie: "sedum", tipo: "burrito", precio: 250 },
+    { categoria: "plantas de interior", especie: "calathea", tipo: "tiostar", precio: 350 },
+    { categoria: "plantas de interior", especie: "pothus", tipo: "variegado", precio: 500 },
+    { categoria: "plantas de interior", especie: "monstera deliciosa", tipo: "", precio: 1200, },
+    { categoría: "macetas", material: "plastico", color: "negra", tamaño: 8, precio: 50 },
+    { categoría: "macetas", material: "plastico", color: "negra", tamaño: 12, precio: 70 },
+    { categoría: "macetas", material: "plastico", color: "negra", tamaño: 24, precio: 140 },
+    { categoría: "macetas", material: "plastico", color: "blanco", tamaño: 8, precio: 50 },
+    { categoría: "macetas", material: "plastico", color: "blanco", tamaño: 12, precio: 70 },
+    { categoría: "macetas", material: "plastico", color: "blanco", tamaño: 24, precio: 140 },
+    { categoría: "macetas", material: "barro", color: "terracota", tamaño: 8, precio: 90 },
+    { categoría: "macetas", material: "barro", color: "terracota", tamaño: 12, precio: 120 },
+    { categoría: "macetas", material: "barro", color: "terracota", tamaño: 24, precio: 200 },
 ]
 
-
-// PRODUCTOS PLANTAS DE INTERIOR
-let productosDeInterior = [
-    { especie: "calathea", tipo: "tiostar", precio: 350 },
-    { especie: "pothus", tipo: "variegado", precio: 500 },
-    { especie: "monstera deliciosa", tipo: "", precio: 1200, },
-]
-
-//{ material: "", color:"", tamaño: , precio:  ,foto: "" }
-// MACETAS
-let productosMacetas = [
-    { material: "plastico", color: "negra", tamaño: 8, precio: 50 },
-    { material: "plastico", color: "negra", tamaño: 12, precio: 70 },
-    { material: "plastico", color: "negra", tamaño: 24, precio: 140 },
-    { material: "plastico", color: "blanco", tamaño: 8, precio: 50 },
-    { material: "plastico", color: "blanco", tamaño: 12, precio: 70 },
-    { material: "plastico", color: "blanco", tamaño: 24, precio: 140 },
-    { material: "barro", color: "terracota", tamaño: 8, precio: 90 },
-    { material: "barro", color: "terracota", tamaño: 12, precio: 120 },
-    { material: "barro", color: "terracota", tamaño: 24, precio: 200 },
-]
-*/
-// ${}
+let html = "";
 
 
+window.onload = mostrarProductos(listaProductos);
 
 
-window.onload(mostrarProductos)
-
-
-// recorrer array, x cada pd generar html + innerHTML  <div class="row row-cols-1 row-cols-md-3 g-4"> get elemen ID 
 function mostrarProductos(listaProductos) {
     
     for (let i = 0; i < listaProductos.length; i++) {
-        document.getElementById("articulos").innerHTML = function generarHTML(listaProductos)
+        document.getElementById("articulos").innerHTML += generarHTML(listaProductos[i])
     }
+    
 }
 
-
-
-
-
-
-const producto = { especie: "haworthia", tipo: "fasciata", descripcion: "¡Suculenta ideal para interior! Ideal para lugares iluminados sin sol directo", precio: 200, foto: "(./fotos/rsz_suculentas-2.jpg" }
-let html = "";
 
 function generarHTML(producto) {
     html =
@@ -74,7 +51,9 @@ function generarHTML(producto) {
             </div >
     </div > `
 
-return html}
+    return html
+}
+
 
 
 
