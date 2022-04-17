@@ -38,12 +38,15 @@ let productosMacetas = [
 
 
 
-window.onload(fx)
+window.onload(mostrarProductos)
 
 
 // recorrer array, x cada pd generar html + innerHTML  <div class="row row-cols-1 row-cols-md-3 g-4"> get elemen ID 
-function mostrarProductos (){
-
+function mostrarProductos(listaProductos) {
+    
+    for (let i = 0; i < listaProductos.length; i++) {
+        document.getElementById("articulos").innerHTML = function generarHTML(listaProductos)
+    }
 }
 
 
@@ -55,8 +58,8 @@ const producto = { especie: "haworthia", tipo: "fasciata", descripcion: "¡Sucul
 let html = "";
 
 function generarHTML(producto) {
-    html = 
-    `<div class="col">
+    html =
+        `<div class="col">
         <div class="card">
              <div title= "${producto.especie} ${producto.tipo}" class="cover cover-small"
                 style="background-image: url(${producto.foto})" ;>
@@ -71,8 +74,7 @@ function generarHTML(producto) {
             </div >
     </div > `
 
-    alert(html)
-}
+return html}
 
 
 
