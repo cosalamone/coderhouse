@@ -1,23 +1,30 @@
 // CLASES PLANTAS Y MACETAS
-class plantas {
-    constructor(cateogria, especie, tipo, precio, foto, descripcion, ) {
+class Planta {
+    constructor(categoria, especie, tipo, precio, foto, descripcion,) {
         this.categoria = categoria;
         this.especie = especie;
         this.tipo = tipo;
-        this.precio=precio;
-        this.foto=foto;
-        this.descripcion=descripcion; 
+        this.precio = precio;
+        this.foto = foto;
+        this.descripcion = descripcion;
+    }
+    titulo() {
+        this.especie + " " + this.tipo
     }
 }
 
-class macetas{
-    constructor(categoria, material, color, tamaño, precio, descripcion){
-        this.categoria=categoria;
-        this.material=material;
-        this.color=color;
-        this.tamaño=tamaño;
-        this.precio=precio;
-        this.descripcion=descripcion;
+class Maceta {
+    constructor(categoria, material, color, tamaño, foto, precio, descripcion) {
+        this.categoria = categoria;
+        this.material = material;
+        this.color = color;
+        this.tamaño = tamaño;
+        this.foto = foto;
+        this.precio = precio;
+        this.descripcion = descripcion;
+    }
+    titulo() {
+       this.categoria + " de " + this.material + " N" + this.tamaño
     }
 }
 
@@ -25,23 +32,23 @@ class macetas{
 
 // PRODUCTOS 
 let listaProductos = [
-    { categoria: "suculentas", especie: "haworthia", tipo: "fasciata", precio: 200, foto: "(./fotos/rsz_suculentas-2.jpg" },
-    { categoria: "suculentas", especie: "graptopetalum", tipo: "paraguayense", precio: 150, foto: "./fotos/rsz_suculentas-1.jpg" },
-    { categoria: "suculentas", especie: "echeveria", tipo: "lola", precio: 250 },
-    { categoria: "suculentas", especie: "gasteria", tipo: "", precio: 250 },
-    { categoria: "suculentas", especie: "sedum", tipo: "burrito", precio: 250 },
-    { categoria: "plantas de interior", especie: "calathea", tipo: "tiostar", precio: 350 },
-    { categoria: "plantas de interior", especie: "pothus", tipo: "variegado", precio: 500 },
-    { categoria: "plantas de interior", especie: "monstera deliciosa", tipo: "", precio: 1200, },
-    { categoria: "macetas", material: "plastico", color: "negra", tamaño: 8, precio: 50 },
-    { categoria: "macetas", material: "plastico", color: "negra", tamaño: 12, precio: 70 },
-    { categoria: "macetas", material: "plastico", color: "negra", tamaño: 24, precio: 140 },
-    { categoria: "macetas", material: "plastico", color: "blanco", tamaño: 8, precio: 50 },
-    { categoria: "macetas", material: "plastico", color: "blanco", tamaño: 12, precio: 70 },
-    { categoria: "macetas", material: "plastico", color: "blanco", tamaño: 24, precio: 140 },
-    { categoria: "macetas", material: "barro", color: "terracota", tamaño: 8, precio: 90 },
-    { categoria: "macetas", material: "barro", color: "terracota", tamaño: 12, precio: 120 },
-    { categoria: "macetas", material: "barro", color: "terracota", tamaño: 24, precio: 200 },
+    new Planta("suculentas", "haworthia", "fasciata", 200, "(./fotos/rsz_suculentas-2.jpg", "¡Suculenta ideal para interior! Ideal para lugares iluminados sin sol directo."),
+    new Planta("suculentas", "graptopetalum", "paraguayense", 150, "./fotos/rsz_suculentas-1.jpg", "Ideal para lugares con sol directo entre 3 y 6 horas. En verano protegerla de las horas mpas fuertes de sol."),
+    new Planta("suculentas", "echeveria", "caly argentea", 250, "./fotos/", "Por su pruina aguanta bien las horas de sol. Hay que tener cuidado con no excederse con el riego, es propensa a pudrición de tallo"),
+    new Planta("suculentas", "gasteria", "normal", "./foto/", 250, "Necesitan cuidados similares a las haworthias, lugares con luz natural pero sin sol directo"),
+    new Planta("suculentas", "sedum", "burrito", "./foto/", 250, "Hermosa suculenta colgante. Ideal para lugares iluminados con pocas horas de sol, preferentemente sol suave de la mañana o últimos de la tarde"),
+    new Planta("plantas de interior", "calathea", "tiostar", "./foto/", 350, "Ideal para lugares iluminados sin sol directo"),
+    new Planta("plantas de interior", "pothus", "variegado", "./foto/", 500, "Planta de interior, sin sol directo, ideal para lugares humedos como el baño"),
+    new Planta("plantas de interior", "monstera deliciosa", "normal", "./foto/", 1200, "Ideal para lugares con mediasombra, como debajo de un arbol o lugar semitechado"),
+    new Maceta("macetas", "plastico", "negra", 8, "./foto/", 50, "Maceta de plastico de color negra. Tamaño numero 8"),
+    new Maceta("macetas", "plastico", "negra", 12, "./foto/", 70, "Maceta de plastico de color negra. Tamaño numero 12"),
+    new Maceta("macetas", "plastico", "negra", 24, "./foto/", 140, "Maceta de plastico de color negra. Tamaño numero 24"),
+    new Maceta("macetas", "plastico", "blanco", 8, "./foto/", 50, "Maceta de plastico de color blanco. Tamaño numero 8"),
+    new Maceta("macetas", "plastico", "blanco", 12, "./foto/", 70, "Maceta de plastico de color blanco. Tamaño numero 12"),
+    new Maceta("macetas", "plastico", "blanco", 24, "./foto/", 140, "Maceta de plastico de color blanco. Tamaño numero 24"),
+    new Maceta("macetas", "barro", "terracota", 8, "./foto/", 90, "Maceta de barro. Tamaño numero 8"),
+    new Maceta("macetas", "barro", "terracota", 12, "./foto/", 120, "Maceta de barro. Tamaño numero 12"),
+    new Maceta("macetas", "barro", "terracota", 24, "./foto/", 200, "Maceta de barro. Tamaño numero 24"),
 ]
 
 let html = "";
