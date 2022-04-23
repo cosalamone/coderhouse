@@ -27,6 +27,8 @@ h1,h2,h3,h4,h5,h6 {
 .card {
     border:0 !important;
     box-shadow:  0 4px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);
+    height: 150;
+    
 }
 
 .card-title{
@@ -34,10 +36,17 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .card-text{
-    min-height: 9.5rem;
+    height: 50px;
+    width: 98%;
     text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
+.card-text:hover{
+    overflow: visible; 
+    white-space: normal;
+    height:auto;  /* just added this line */
+}
 .navid {
     height: 1000px;
     background-image:url(./fotos/rsz_navidad.jpg);
@@ -151,3 +160,4 @@ h1,h2,h3,h4,h5,h6 {
     float: right;
     width: 75%;
 }
+
