@@ -98,9 +98,6 @@ function generarHTML(producto) {
 
 
 
-
-window.onload = carritoCompra();
-
 // FUNCION PRINCIPAL CARRITO COMPRA
 
 function carritoCompra() {
@@ -176,3 +173,12 @@ function precioProducto(nombreProducto) {
 }
 
 // FIN funcion 3 - calcular Precio del Producto
+
+
+// FUNCION FILTER LISTAPRODUCTOS
+
+function filterListaProductos(){
+
+}
+
+// FIN FUNCION FILTER LISTAPRODUCTOS
