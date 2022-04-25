@@ -78,7 +78,7 @@ function mostrarProductos(listaProductos) {
 function generarHTML(producto) {
     html =
         `<div class="col">
-    <div class="card">
+    <div class="card animate__animated animate__fadeIn">
     <div title= "${producto.titulo()}" class="cover cover-small"
     style="background-image: url(${producto.foto})";>
     </div>
